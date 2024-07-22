@@ -25,16 +25,16 @@ public class ManyToOneTest {
     @DisplayName("N대1 단방향 테스트")
     void test1() {
         User user = new User();
-        user.setName("Robbie");
+//        user.setName("Robbie");
 
         Food food = new Food();
-        food.setName("후라이드 치킨");
-        food.setPrice(15000);
+//        food.setName("후라이드 치킨");
+//        food.setPrice(15000);
 //        food.setUser(user); // 외래 키(연관 관계) 설정
 
         Food food2 = new Food();
-        food2.setName("양념 치킨");
-        food2.setPrice(20000);
+//        food2.setName("양념 치킨");
+//        food2.setPrice(20000);
 //        food2.setUser(user); // 외래 키(연관 관계) 설정
 
         userRepository.save(user);
@@ -48,16 +48,16 @@ public class ManyToOneTest {
     void test2() {
 
         Food food = new Food();
-        food.setName("후라이드 치킨");
-        food.setPrice(15000);
+//        food.setName("후라이드 치킨");
+//        food.setPrice(15000);
 
         Food food2 = new Food();
-        food2.setName("양념 치킨");
-        food2.setPrice(20000);
+//        food2.setName("양념 치킨");
+//        food2.setPrice(20000);
 
         // 외래 키의 주인이 아닌 User 에서 Food 를 저장해보겠습니다.
         User user = new User();
-        user.setName("Robbie");
+//        user.setName("Robbie");
 //        user.getFoodList().add(food);
         // food.setUser(user);
 //        user.getFoodList().add(food2);
@@ -76,17 +76,17 @@ public class ManyToOneTest {
     void test3() {
 
         Food food = new Food();
-        food.setName("후라이드 치킨");
-        food.setPrice(15000);
+//        food.setName("후라이드 치킨");
+//        food.setPrice(15000);
 
         Food food2 = new Food();
-        food2.setName("양념 치킨");
-        food2.setPrice(20000);
+//        food2.setName("양념 치킨");
+//        food2.setPrice(20000);
 
         // 외래 키의 주인이 아닌 User 에서 Food 를 쉽게 저장하기 위해 addFoodList() 메서드 생성하고
         // 해당 메서드에 외래 키(연관 관계) 설정 food.setUser(this); 추가
         User user = new User();
-        user.setName("Robbie");
+//        user.setName("Robbie");
 //        user.addFoodList(food);
 //        user.addFoodList(food2);
 
@@ -100,16 +100,16 @@ public class ManyToOneTest {
     @DisplayName("N대1 양방향 테스트")
     void test4() {
         User user = new User();
-        user.setName("Robbert");
+//        user.setName("Robbert");
 
         Food food = new Food();
-        food.setName("고구마 피자");
-        food.setPrice(30000);
+//        food.setName("고구마 피자");
+//        food.setPrice(30000);
 //        food.setUser(user); // 외래 키(연관 관계) 설정
 
         Food food2 = new Food();
-        food2.setName("아보카도 피자");
-        food2.setPrice(50000);
+//        food2.setName("아보카도 피자");
+//        food2.setPrice(50000);
 //        food2.setUser(user); // 외래 키(연관 관계) 설정
 
         userRepository.save(user);
