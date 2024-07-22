@@ -59,7 +59,9 @@ public class ManyToOneTest {
         User user = new User();
         user.setName("Robbie");
         user.getFoodList().add(food);
+        // food.setUser(user);
         user.getFoodList().add(food2);
+        // food2.setUser(user);
 
         userRepository.save(user);
         foodRepository.save(food);
